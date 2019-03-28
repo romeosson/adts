@@ -91,5 +91,31 @@ void List::remove(int k)
 	num_elements--;
 	}
 	
+int List::getAtele(int k)
+{
+	Node* tmpPtr = frontPtr;
+	int loc=1;
+	while(loc!=k)
+	{
+		tmpPtr = tmpPtr ->link;
+		loc++;
+	}
+	return tmpPtr->data;
+}
+void List::wipe()
+{
+	while (num_elements!=0)
+	{
+		remove(1);
+	}
+}
+void List::display()
+{
+	for (Node* tempPtr =frontPtr; tempPtr != nullptr; tempPtr= tempPtr->link)
+	{
+		cout <<tempPtr->data<<"";
+	}
+}
+	
 	//Implementations of missing operations
 	
