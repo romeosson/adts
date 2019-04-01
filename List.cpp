@@ -117,5 +117,4 @@ void List::display()
 	}
 }
 	
-	//Implementations of missing operations
 	
